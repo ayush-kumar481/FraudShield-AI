@@ -1,0 +1,67 @@
+# =========================
+# Environment Variables
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Node.js / React
+# =========================
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+venv/
+.venv/
+ml-service/venv/
+
+# =========================
+# Java / Maven
+# =========================
+target/
+**/target/
+
+# =========================
+# Eclipse
+# =========================
+.metadata/
+.settings/
+.classpath
+.project
+.factorypath
+
+# =========================
+# Logs / Generated Output
+# =========================
+*.log
+error.txt
+latest-output.txt
+output.txt
+log.txt
+
+# =========================
+# IDE
+# =========================
+.idea/
+.vscode/
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Python generated files
+# =========================
+*.pyc
+.ipynb_checkpoints/
