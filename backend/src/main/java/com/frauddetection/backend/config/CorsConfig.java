@@ -1,3 +1,4 @@
+
 package com.frauddetection.backend.config;
 
 import org.springframework.context.annotation.Bean;
@@ -10,15 +11,17 @@ public class CorsConfig {
 
     @Bean
     public WebMvcConfigurer corsConfigurer() {
-
         return new WebMvcConfigurer() {
 
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:5173")
-                        .allowedMethods("*")
+                        .allowedOrigins(
+                                "http://localhost:5173",
+                                "http://localhost:5174")
+                        .allowedMethods(
+                                "GET", "POST", "PUT", "DELETE",
+                                "PATCH", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
             }
