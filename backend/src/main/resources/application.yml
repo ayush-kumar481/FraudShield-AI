@@ -4,12 +4,12 @@ spring:
 
   data:
     mongodb:
-      uri: mongodb://localhost:27017/fraud_detection?retryWrites=false
+      uri: mongodb+srv://HawkZ:ZEgQCbqxsmeuCcZK@cluster0.krpqfdb.mongodb.net/fraud_detection?retryWrites=true&w=majority
       auto-index-creation: true
 
 razorpay:
-  key-id: rzp_test_TJNwneI9S1sOrG
-  key-secret: s3ZwYyA73bXkgf7a3Ewyb9bT
+  key-id: rzp_test_ToDP39umxvb16P
+  key-secret: saYA2M0Zd4TRH3sNNjTaW5A5
 
 server:
   port: ${SERVER_PORT:8080}
@@ -19,7 +19,7 @@ server:
     include-binding-errors: never
 
 ml-service:
-  base-url: http://localhost:8000
+  base-url: ${ML_SERVICE_BASE_URL:https://fraudshield-ai-za6k.onrender.com}
   predict-path: /predict
   health-path: /health
   connect-timeout-ms: ${ML_SERVICE_CONNECT_TIMEOUT_MS:2000}
